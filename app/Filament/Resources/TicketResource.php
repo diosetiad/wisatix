@@ -82,6 +82,12 @@ class TicketResource extends Resource
                             ])
                             ->required(),
 
+                        TextInput::make('rating')
+                            ->numeric()
+                            ->required()
+                            ->minValue(0)
+                            ->maxValue(5),
+
                         Select::make('category_id')
                             ->relationship('category', 'name')
                             ->searchable()
