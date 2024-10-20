@@ -67,7 +67,6 @@ class TicketResource extends Resource
                             ->required(),
 
                         TextInput::make('path_video')
-                            ->required()
                             ->maxLength(255),
 
                         TextInput::make('price')
