@@ -22,7 +22,7 @@ class StorePaymentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'proof' => ['required|image|mimes:png,jgp,jpeg']
+            'proof' => 'required|image|mimes:png,jgp,jpeg'
         ];
     }
 }

@@ -22,11 +22,11 @@ class StoreBookingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required|string|max:100'],
-            'email' => ['required|email|string|lowercase|max:100'],
-            'phone_number' => ['required|string|max:15|regex:/^[\d+\s-]+$/'],
-            'started_at' => ['required|date|after:today'],
-            'total_participant' => ['required|numeric|min:1']
+            'name' => 'required|string|max:100',
+            'email' => 'required|email|string|lowercase|max:100',
+            'phone_number' => 'required|string|max:15|regex:/^[\d+\s-]+$/',
+            'started_at' => 'required|date|after:today',
+            'total_participant' => 'required|numeric|min:1'
         ];
     }
 }
