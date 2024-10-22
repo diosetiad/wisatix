@@ -52,6 +52,11 @@ class BookingService
   public function payment()
   {
     $booking = session('booking');
+
+    if (!$booking) {
+      return null;
+    }
+
     $ticket = $this->ticketRepository->find($booking['ticket_id']);
 
     return compact('booking', 'ticket');
@@ -86,6 +91,13 @@ class BookingService
       $bookingTransactionId = $newBooking->id;
     });
 
+    session()->forget('booking');
+
     return $bookingTransactionId;
+  }
+
+  public function getBookingDetails(array $validated)
+  {
+    return $this->bookingRepository->findByTrxIdAndPhoneNumber($validated['booking_trx_id'], $validated['phone_number']);
   }
 }

@@ -4,7 +4,6 @@ namespace App\Repositories;
 
 use App\Models\Ticket;
 use App\Repositories\Contracts\TicketRepositoryInterface;
-use Illuminate\Support\Facades\DB;
 
 class TicketRepository implements TicketRepositoryInterface
 {

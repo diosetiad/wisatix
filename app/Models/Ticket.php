@@ -25,6 +25,7 @@ class Ticket extends Model
         'open_time_at',
         'closed_time_at',
         'is_popular',
+        'rating',
         'slug'
     ];
 
