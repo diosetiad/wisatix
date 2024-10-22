@@ -21,4 +21,8 @@ Route::post('/booking/{ticket:slug}', [BookingController::class, 'bookingStore']
 Route::get('/booking/finished/{bookingTransaction}', [BookingController::class, 'bookingFinished'])->name('front.booking_finished');
 
 Route::get('/check-booking', [BookingController::class, 'checkBooking'])->name('front.check_booking');
+
+Route::get('/check-booking/details', function () {
+  return redirect()->route('front.index')->withErrors(['error' => 'Invalid access']);
+});
 Route::post('/check-booking/details', [BookingController::class, 'checkBookingDetails'])->name('front.check_booking_details');
