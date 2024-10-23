@@ -432,6 +432,6 @@
             </ul>
         </nav>
 
-        @vite("resources/js/index.js")
+        @vite("resources/js/front/index.js")
     </body>
 </html>

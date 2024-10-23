@@ -330,6 +330,6 @@
             </form>
         </main>
 
-        @vite("resources/js/payment.js")
+        @vite("resources/js/front/payment.js")
     </body>
 </html>

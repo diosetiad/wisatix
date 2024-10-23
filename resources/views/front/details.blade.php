@@ -314,6 +314,6 @@
             </a>
         </nav>
 
-        @vite("resources/js/details.js")
+        @vite("resources/js/front/details.js")
     </body>
 </html>

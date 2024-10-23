@@ -284,6 +284,6 @@
             </form>
         </main>
 
-        @vite("resources/js/booking.js")
+        @vite("resources/js/front/booking.js")
     </body>
 </html>

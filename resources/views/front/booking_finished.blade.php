@@ -94,6 +94,6 @@
             </section>
         </main>
 
-        @vite("resources/js/bookingFinished.js")
+        @vite("resources/js/front/bookingFinished.js")
     </body>
 </html>
