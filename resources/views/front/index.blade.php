@@ -309,7 +309,7 @@
 
                 <li class="text-[#13181D]">
                     <a
-                        href="{{ route("front.check_booking") }}"
+                        href="{{ route("front.check-booking") }}"
                         aria-label="View check booking"
                     >
                         <div

@@ -52,7 +52,7 @@
         >
             <form
                 method="POST"
-                action="{{ route("front.booking_store", $ticket->slug) }}"
+                action="{{ route("front.booking-store", $ticket->slug) }}"
                 class="flex flex-col gap-[18px] px-4"
             >
                 @csrf

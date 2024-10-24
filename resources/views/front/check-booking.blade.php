@@ -14,7 +14,7 @@
             <section class="flex flex-col">
                 <form
                     method="POST"
-                    action="{{ route("front.check_booking_details") }}"
+                    action="{{ route("front.check-booking-details") }}"
                     class="flex w-full max-w-[329px] shrink-0 flex-col gap-6 rounded-[30px] bg-white p-5"
                 >
                     @csrf
@@ -164,7 +164,7 @@
 
                 <li class="text-[#F97316]">
                     <a
-                        href="{{ route("front.check_booking") }}"
+                        href="{{ route("front.check-booking") }}"
                         aria-label="View check booking"
                     >
                         <div

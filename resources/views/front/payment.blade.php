@@ -53,7 +53,7 @@
             <form
                 method="POST"
                 enctype="multipart/form-data"
-                action="{{ route("front.payment_store") }}"
+                action="{{ route("front.payment-store") }}"
                 class="flex flex-col gap-[18px] px-4"
             >
                 @csrf

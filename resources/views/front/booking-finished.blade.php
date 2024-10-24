@@ -85,7 +85,7 @@
                     </a>
 
                     <a
-                        href="{{ route("front.check_booking") }}"
+                        href="{{ route("front.check-booking") }}"
                         class="w-full rounded-full bg-[#13181D] p-[14px_20px] text-center font-bold text-white"
                     >
                         Check My Booking
