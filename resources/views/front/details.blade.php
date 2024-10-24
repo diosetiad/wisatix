@@ -143,42 +143,7 @@
                 <h2 class="font-bold">Time</h2>
 
                 <ul class="grid grid-cols-2 gap-4">
-                    @php
-                        $operationTime = [
-                            [
-                                "icon" => "assets/icons/timer.svg",
-                                "alt" => "Open time icon",
-                                "label" => "Open Time",
-                                "time" => $ticket->open_time_at,
-                            ],
-                            [
-                                "icon" => "assets/icons/clock.svg",
-                                "alt" => "Closed time icon",
-                                "label" => "Closed Time",
-                                "time" => $ticket->closed_time_at,
-                            ],
-                        ];
-                    @endphp
-
-                    @foreach ($operationTime as $item)
-                        <li
-                            class="flex items-center gap-4 rounded-3xl bg-[#F8F8F9] p-[14px_16px]"
-                        >
-                            <img
-                                src="{{ asset($item["icon"]) }}"
-                                alt="{{ $item["alt"] }}"
-                                class="h-6 w-6"
-                            />
-
-                            <div class="flex flex-col">
-                                <span>{{ $item["label"] }}</span>
-
-                                <span class="text-lg font-bold">
-                                    {{ $item["time"] }}
-                                </span>
-                            </div>
-                        </li>
-                    @endforeach
+                    @include("components.time-card")
                 </ul>
             </section>
 
@@ -186,50 +151,7 @@
                 <h2 class="font-bold">Get to Know</h2>
 
                 <ul class="grid grid-cols-3 gap-3">
-                    @php
-                        $benefits = [
-                            [
-                                "icon" => "assets/icons/security-card.svg",
-                                "alt" => "Security icon",
-                                "label" => "Security",
-                                "desc" => "24/7 Support",
-                            ],
-                            [
-                                "icon" => "assets/icons/hospital.svg",
-                                "alt" => "Insurance icon",
-                                "label" => "Insurance",
-                                "desc" => "Available",
-                            ],
-                            [
-                                "icon" => "assets/icons/lovely.svg",
-                                "alt" => "Comfort icon",
-                                "label" => "Comfort",
-                                "desc" => "Easy Refund",
-                            ],
-                        ];
-                    @endphp
-
-                    @foreach ($benefits as $item)
-                        <li
-                            class="flex flex-col items-center gap-3 rounded-3xl bg-[#13181D] p-[14px_16px] text-center"
-                        >
-                            <img
-                                src="{{ asset($item["icon"]) }}"
-                                alt="{{ $item["alt"] }}"
-                                class="h-9 w-9"
-                            />
-
-                            <div class="flex flex-col gap-1 text-white">
-                                <span class="font-bold">
-                                    {{ $item["label"] }}
-                                </span>
-
-                                <span class="text-xs">
-                                    {{ $item["desc"] }}
-                                </span>
-                            </div>
-                        </li>
-                    @endforeach
+                    @include("components.benefit-card")
                 </ul>
             </section>
 
