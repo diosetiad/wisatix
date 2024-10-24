@@ -52,7 +52,7 @@ class BookingController extends Controller
         $bookingTransactionId = $this->bookingService->paymentStore($validated);
 
         if ($bookingTransactionId) {
-            return redirect()->route('front.booking_finished', $bookingTransactionId);
+            return redirect()->route('front.booking-finished', $bookingTransactionId);
         }
 
         return redirect()->route('front.index')->withErrors(['error' => 'Payment failed. Please try again.']);
@@ -60,12 +60,12 @@ class BookingController extends Controller
 
     public function bookingFinished(BookingTransaction $bookingTransaction)
     {
-        return view('front.booking_finished', compact('bookingTransaction'));
+        return view('front.booking-finished', compact('bookingTransaction'));
     }
 
     public function checkBooking()
     {
-        return view('front.check_booking');
+        return view('front.check-booking');
     }
 
     public function checkBookingDetails(StoreCheckBookingRequest $request)
@@ -75,9 +75,9 @@ class BookingController extends Controller
         $bookingDetails = $this->bookingService->getBookingDetails($validated);
 
         if ($bookingDetails) {
-            return view('front.check_booking_details', compact('bookingDetails'));
+            return view('front.check-booking-details', compact('bookingDetails'));
         }
 
-        return redirect()->route('front.check_booking')->withErrors(['error' => 'Transaction not found']);
+        return redirect()->route('front.check-booking')->withErrors(['error' => 'Transaction not found']);
     }
 }
