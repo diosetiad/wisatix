@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Jobs\SendBookingConfirmedEmail;
 use App\Models\BookingTransaction;
 use App\Repositories\Contracts\BookingRepositoryInterface;
 use App\Repositories\Contracts\TicketRepositoryInterface;
@@ -89,6 +90,8 @@ class BookingService
       $newBooking = $this->bookingRepository->createBooking($validated);
 
       $bookingTransactionId = $newBooking->id;
+
+      SendBookingConfirmedEmail::dispatch($newBooking);
     });
 
     session()->forget('booking');

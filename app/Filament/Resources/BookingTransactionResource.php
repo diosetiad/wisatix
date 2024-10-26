@@ -162,6 +162,8 @@ class BookingTransactionResource extends Resource
                         $record->is_paid = true;
                         $record->save();
 
+                        SendBookingApprovedEmail::dispatch($record);
+
                         Notification::make()
                             ->title('Ticket Approved')
                             ->success()
