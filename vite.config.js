@@ -9,6 +9,7 @@ export default defineConfig({
                 "resources/js/app.js",
                 "resources/js/front/index.js",
                 "resources/js/front/details.js",
+                "resources/js/front/booking.js",
             ],
             refresh: true,
         }),
