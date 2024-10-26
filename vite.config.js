@@ -10,6 +10,8 @@ export default defineConfig({
                 "resources/js/front/index.js",
                 "resources/js/front/details.js",
                 "resources/js/front/booking.js",
+                "resources/js/front/payment.js",
+                "resources/js/front/bookingFinished.js",
             ],
             refresh: true,
         }),
